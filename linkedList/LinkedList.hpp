@@ -1,6 +1,6 @@
 /**
-*	@author 
-*	@date 
+*	@author Diego Garcia
+*	@date 2/13/2021
 *	@file LinkedList.hpp
 *	@brief Implementation file for templated LinkedList class
 */
@@ -32,7 +32,16 @@ int LinkedList<T>::size() const
 	/** TODO 
 		Fix this method
 	*/
-	return(0);
+	int counter = 0;
+	Node<T>* temp = m_front;
+
+	while(temp->getValue() != nullptr)
+	{
+		counter++;
+		temp = temp->getNext();
+	}
+
+	return counter;
 }
 
 template <typename T>
